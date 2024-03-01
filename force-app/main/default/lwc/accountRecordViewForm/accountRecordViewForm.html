@@ -1,0 +1,27 @@
+<template>
+        <lightning-card icon-name="custom:custom10" title="Lightning record VIEW form demo">
+                <div class="slds-var-m-horizontal_medium">
+                     <lightning-record-view-form
+                         o4bject-api-name={objectName}
+                         record-id={recordId}
+                     >
+                     <!--fields-->
+                <div class="slds-grid slds-gutters">
+                        <div class="slds-col" style="background-color: rgb(181, 234, 216);">
+                <lightning-output-field field-name={fields.name}></lightning-output-field>
+                <lightning-output-field field-name={fields.annualRevenue}></lightning-output-field>
+                <lightning-output-field field-name={fields.type}></lightning-output-field>
+            </div>
+            <div class="slds-col" style="background-color: rgb(245, 245, 196);">
+                <lightning-output-field field-name={fields.industry}></lightning-output-field>
+                <lightning-output-field field-name={fields.website}></lightning-output-field>
+                <lightning-output-field field-name={fields.phone}></lightning-output-field>
+            </div>
+        </div>
+            
+            
+
+           </lightning-record-view-form>
+        </div>
+    </lightning-card>
+</template>

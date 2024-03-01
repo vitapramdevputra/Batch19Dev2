@@ -1,0 +1,19 @@
+<template>
+    <lightning-card icon-name="custom:custom2" title="TRACK PROPERTY">
+      <div class="slds-var-m-horizontal_medium">
+        
+        street: {address.street}<br/>
+        city: {address.city} <br/>
+        country: {address.country} <br/>
+
+        <lightning-input 
+          type="text"
+          label="Street"
+          value={address.street}
+          onchange={handleStreetChange}
+        ></lightning-input>
+        
+      </div>
+    </lightning-card>
+    
+</template>

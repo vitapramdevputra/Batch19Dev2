@@ -1,0 +1,13 @@
+<template>
+    <lightning-card icon-name="custom:custom5" title="Conditional Rendering Demo1">
+        <div class="slds-var-m-horizontal_medium">
+           <template lwc:if={showData}>
+                We are almost done. ShowData is true btw.
+           </template>
+           <template lwc:else>
+                ShowData is FALSE. OKAY?
+           </template>
+    
+        </div>
+    </lightning-card>
+</template>

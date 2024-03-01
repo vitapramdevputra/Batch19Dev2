@@ -1,0 +1,34 @@
+<template>
+    <lightning-card icon-name="custom:custom30" title="Update Record function for product">
+      <div class="slds-var-m-horizontal_large">
+        <form class="productform">
+            <template lwc:if={myProduct}>
+                
+                <!--Name /title: input (text) -->
+                <lightning-input type="text" label="Title" name="Name" onchange={handleChange} value={myProduct.fields.Name.value}></lightning-input>
+                
+                <!-- Type: picklist (combobox)-->
+                <lightning-combobox name="Type__c" label="Type" options={myTypeOptions} onchange={handleChange} value={myProduct.fields.Type__c.value}></lightning-combobox>
+                
+                <!-- Brand: input (text)-->
+                <lightning-input type="text" label="Brand" name="Brand__c" onchange={handleChange} value={myProduct.fields.Brand__c.value}></lightning-input>
+                
+                <!-- description lightning-textarea -->
+                <lightning-textarea max-length="1000" name="Description__c" label="Description" placeholder="type here..."
+                    variant="standard" onchange={handleChange} value={myProduct.fields.Description__c.value}></lightning-textarea>
+                
+                <!-- price input (number)-->
+                <lightning-input type="number" label="Price" name="Price__c" onchange={handleChange} value={myProduct.fields.Price__c.value}></lightning-input>
+
+                <div class="slds-align_absolute-center slds-var-m-around_small">
+                    <lightning-button variant="neutral" label="Cancel" class="slds-var-m-right_small"
+                        onclick={handleCancelClick}></lightning-button>
+                    <lightning-button variant="brand" label="Save" onclick={handleSaveClick}></lightning-button>
+                </div>
+            </template>
+        </form>
+        
+      </div>
+    </lightning-card>
+    
+</template>

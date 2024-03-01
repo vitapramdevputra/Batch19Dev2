@@ -1,0 +1,28 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card icon-name="standard:opportunity" title="Get Opportunity using imperative Apex call">
+      <div class="slds-var-m-around_large">
+            <!--buttons-->
+            <div class="slds-align_absolute-center slds-var-m-around_small">
+                <lightning-button variant="brand-outline" label="Get All Opps" onclick={handleGetAllOppsClick}></lightning-button>
+                <lightning-button variant="brand-outline" label="Get total amount" onclick={handleTotalAmountClick}
+                    class="slds-var-m-left_medium"></lightning-button>
+            </div>
+
+            <template lwc:if={showAllOpps}>
+                <div>
+                    <!-- Get all opportunities NOW. (visible when Get all opps is clicked) -->
+                    <lightning-datatable key-field="Id" data={allOpps} columns={oppsColumns} hide-checkbox-column></lightning-datatable>
+                </div>
+            </template>
+
+            <template lwc:if={showTotalAmount}>
+                <div>
+                    Total Opportunity Amount is... {totalAmount}
+                </div>
+            </template>
+        
+      </div>
+    </lightning-card>
+    
+</template>

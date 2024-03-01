@@ -1,0 +1,17 @@
+<template>
+    <lightning-card icon-name="custom:custom43" title="Parent to Child non-primitive">
+      <div class="slds-var-m-around_large">
+        <lightning-input name="name" type="text" label="Product name" value={product.name} onchange={handleChange}></lightning-input> <br>
+        <lightning-input name="description" type="text" label="Product description" value={product.description} onchange={handleChange}></lightning-input> <br>
+        <lightning-input name="url" type="url" label="Product image url" value={product.url} onchange={handleChange}></lightning-input>
+      </div>
+    </lightning-card>
+
+    <!-- another lwc card for child component-->
+    <lightning-card icon-name="custom:custom43" title="Child Record">
+      <div>
+        <c-parent-to-child-lwc-child2 record={product}></c-parent-to-child-lwc-child2>
+        
+      </div>
+    </lightning-card>
+</template>

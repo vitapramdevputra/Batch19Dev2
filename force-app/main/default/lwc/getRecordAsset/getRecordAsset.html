@@ -1,0 +1,22 @@
+<template>
+    <lightning-card icon-name="custom:custom20" title="Asset record information">
+      <div class="slds-var-m-around_large">
+        <!-- Card Body  -->
+        <div>
+            Asset Name: {assetName}
+        </div>
+        <div>
+            Account Id: {accountId}
+            <!-- Account Id: {assetInfo.fields.Account__c.value} -->
+        </div>
+        <template lwc:if={assetInfo}>
+            <div>
+                Price: {price}
+            </div>
+            <div>
+                Available: {available}
+            </div>
+        </template>
+      </div>
+    </lightning-card>
+</template>

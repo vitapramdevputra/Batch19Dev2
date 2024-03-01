@@ -1,0 +1,3 @@
+DummyJsonCallouts.getProducts();
+
+DummyJsonCallouts.getRecipes();

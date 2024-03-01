@@ -1,0 +1,18 @@
+<template>
+    <lightning-card icon-name="custom:custom8" title="Looping Demo 2">
+        <div class="slds-var-m-horizontal_medium">
+           <template for:each={accs} for:item="eachAccount">
+                <div key={eachAccount.Id} class="slds-var-m-around_x-small">
+                    <div class="slds-box">
+                        {eachAccount.Name} <br />
+                        {eachAccount.Phone} <br />
+                        {eachAccount.AccountNumber} <br />
+                        {eachAccount.Status} <br />
+                    </div>
+                </div>
+
+           </template>
+        </div>
+    </lightning-card>
+    
+</template>

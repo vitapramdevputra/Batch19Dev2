@@ -1,0 +1,11 @@
+<template>
+    <lightning-card icon-name="standard:record_delete" title="Delete Record with ID">
+     
+      <div class="slds-var-m-around_large">
+        <!-- Card Body  -->
+        <lightning-input type="text" label="Enter 18 digit record id to delete" onchange={handleChange}></lightning-input>
+        <lightning-button variant="destructive" label="DELETE IT NOW" onclick={handleDeleteClick}></lightning-button>
+      </div>
+    </lightning-card>
+    
+</template>

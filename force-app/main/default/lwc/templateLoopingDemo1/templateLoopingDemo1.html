@@ -1,0 +1,13 @@
+<template>
+    <lightning-card icon-name="custom:custom7" title="Looping Demo 1">
+        <div class="slds-var-m-horizontal_medium">
+            <template for:each={books} for:item="currentBook">
+                <div key={currentBook}>
+                    {currentBook}
+                </div>
+
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

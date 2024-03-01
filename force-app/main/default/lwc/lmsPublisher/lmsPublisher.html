@@ -1,0 +1,18 @@
+<template>
+
+    <lightning-card icon-name="custom:custom55" title="LMS Publisher">
+      <div class="slds-var-m-around_large">
+        <lightning-input 
+          type="text"
+          label="Message for all subscribers"
+          onchange={handleMessageChange}
+        ></lightning-input>
+
+        <br>
+        <lightning-button variant="brand" label="Publish" onclick={handleClick} icon-name="utility:outbound_call"
+            icon-position="left"></lightning-button>
+        
+      </div>
+    </lightning-card>
+    
+</template>

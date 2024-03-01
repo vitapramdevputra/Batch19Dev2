@@ -1,0 +1,17 @@
+<template>
+    <lightning-card icon-name="standard:lead" title="Get picklist info of Lead Source">
+      <div class="slds-var-m-horizontal_large">
+        <!-- Card Body  -->
+        <template lwc:if={leadSourceOptions}>
+            <lightning-combobox name="leadSource" label="Lead Source" options={leadSourceOptions}
+                onchange={handleLeadSourceChange}></lightning-combobox>
+        </template>
+            <br/>
+            <template lwc:if={selectedLeadSource}>
+                Selected lead source is: {selectedLeadSource}
+            </template>
+            
+        
+      </div>
+    </lightning-card>
+</template>

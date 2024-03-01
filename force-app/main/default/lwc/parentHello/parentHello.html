@@ -1,0 +1,15 @@
+<template>
+    <lightning-card icon-name="custom:custom48" title="Parent Greet">
+      <div class="slds-var-m-around_large">
+
+        <div if:true={greetName}>
+            Hello Hello {greetName}
+        </div>
+        <div if:false={greetName}>
+            Please type a name. No name, no greetings.
+        </div>
+        <hr>
+        <c-child-hello ongreet={handleGreet}></c-child-hello>
+      </div>
+    </lightning-card>
+</template>

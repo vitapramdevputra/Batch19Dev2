@@ -1,0 +1,23 @@
+<template>
+    <lightning-card icon-name="custom:custom6" title="Conditional redering again">
+      <div class="slds-var-m-horizontal_medium">
+        <!--BUTTON Component-->
+        
+        <lightning-button 
+          variant="brand"
+          label="Show/Hide Data" 
+          onclick={handleClick} 
+        ></lightning-button>
+        <br/>
+        <template lwc:if={showData}>
+            showData is true, so we can see this data.
+        </template>
+        <template lwc:else>
+            showData is FALSE.
+        </template>
+       
+        
+      </div>
+    </lightning-card>
+    
+</template>

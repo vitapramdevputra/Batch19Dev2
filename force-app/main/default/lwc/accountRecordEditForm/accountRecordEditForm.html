@@ -1,0 +1,33 @@
+<template>
+    <lightning-card icon-name="custom:custom12" title="Lightning record EDIT form demo">
+        <div class="slds-var-m-horizontal_medium">
+           <lightning-record-edit-form object-api-name={objectName} record-id={recordId} onsuccess={handleOnSuccess}>
+            <!--to show error messages-->
+            <lightning-messages></lightning-messages>
+            <!--fields-->
+            <div class="slds-grid slds-gutters" style="background-color: antiquewhite;">
+                <div class="slds-col">
+                    <lightning-input-field field-name={fields.name}
+                    ></lightning-input-field>
+                    <lightning-input-field field-name={fields.industry}></lightning-input-field>
+                    <lightning-input-field field-name={fields.revenue}></lightning-input-field>
+
+                </div>
+                    <div class="slds-col">
+                    <lightning-input-field field-name={fields.type}></lightning-input-field>
+                    <lightning-input-field field-name={fields.website}></lightning-input-field>
+                    <lightning-input-field field-name={fields.phone}></lightning-input-field>
+                </div>
+
+            </div>
+            <!--buttons-->
+            <div class="slds-align_absolute-center slds-var-m-vertical_x-large">
+                <lightning-button variant="neutral" label="Cancel" type="reset" class="slds-var-m-right_small"
+                ></lightning-button>
+                <lightning-button variant="brand" label="Save" type="submit"></lightning-button>
+            </div>
+             
+           </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

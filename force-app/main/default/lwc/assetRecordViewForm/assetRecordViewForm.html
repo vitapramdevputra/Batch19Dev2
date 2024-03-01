@@ -1,0 +1,23 @@
+<template>
+    <lightning-card icon-name="custom:custom11" title="Lightning record VIEW form Deno ASSET">
+        <div class="slds-var-m-horizontal_medium">
+            <lightning-record-view-form
+              object-api-name={objectName}
+              record-id={recordId}
+            >
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <lightning-output-field  field-name={fields.name}></lightning-output-field>
+                    <lightning-output-field field-name={fields.price}></lightning-output-field>
+                </div>
+                <div class="slds-col">
+                    <lightning-output-field field-name={fields.account}></lightning-output-field>
+                    <lightning-output-field field-name={fields.available}></lightning-output-field>
+                </div>
+            </div>
+              
+            </lightning-record-view-form>
+        </div>
+    </lightning-card>
+    
+</template>

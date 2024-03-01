@@ -1,0 +1,14 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="slds-var-m-around_medium">
+        <div class="search-results">
+            Search Results
+        </div>
+        <template lwc:if={records}>
+            <lightning-datatable key-field="Id" data={records} columns={columns} hide-checkbox-column class="custom-datatable-style" ></lightning-datatable>
+        </template>
+        <template lwc:if={errors}>
+            {errors}
+        </template>
+    </div>
+</template>

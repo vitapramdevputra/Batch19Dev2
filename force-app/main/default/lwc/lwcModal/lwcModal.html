@@ -1,0 +1,12 @@
+<template>
+    <lightning-modal-header label="Terms and Conditions">
+      accept terms or go away.
+    </lightning-modal-header>
+    <lightning-modal-body>
+      {content}
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button variant="brand" label="Accept" onclick={handleAccept}></lightning-button>
+        <lightning-button variant="destructive" label="Reject" onclick={handleReject}></lightning-button>
+    </lightning-modal-footer>
+</template>
